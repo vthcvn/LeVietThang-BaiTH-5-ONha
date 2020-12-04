@@ -1,26 +1,23 @@
+
 #include <stdio.h>
-void TimUoc(int n, int k){
-	int t=n/k;
-	int a[100];
-	if(t<k)
-		return;
-	if(t*k==n){
-		int i=1;
-		for (i; i<=n; i++){
-			a[i]=k;
-		}
-	}
-		printf("%d ",a[3]);
- 	TimUoc(n,k+1);
-	if(t*k==n && t!=k)
-  		printf("%d ",t);
-}
-int ULLN(int n){
+void TimUoc(int n){
+		i = 1;
+		max = 1; 
+		printf("\nCac uoc so le cua so %d la: ",n); 
+		while(i <= n) { 
+			if((n % i == 0) && (i % 2 == 1)) { 
+				if(i > max) { 
+					max = i; 
+				} 
+			} i++; 
+		} 
+		printf("\nUoc so le lon nhat la %d", max); 
+
 }
 int main(){
-	int k=1,n;
+	int n;
 	printf("Hay nhap n: ");
 	scanf("%d", &n);
-	TimUoc(n,1);
+	TimUoc(n);
 	return 0;
 }
